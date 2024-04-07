@@ -19,9 +19,9 @@
 + **2024.03.26**:get og repo.:hugs:
 
 #### TODO
--[ ] add more cluster method
--[ ] add webui based on gradio
--[ ] add docker image
+- [ ] add more cluster method
+- [ ] add webui based on gradio
+- [ ] add docker image
 
 #### Contact
 If you have any questions, please feel free to reach me out at justinliu707@gmail.com.
