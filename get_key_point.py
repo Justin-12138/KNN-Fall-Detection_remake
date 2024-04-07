@@ -196,3 +196,4 @@ with mp_pose.Pose(
             data.to_csv("key_point.csv", encoding='utf-8',index=False)
             break
 cap.release()
+cv2.destroyAllWindows()
