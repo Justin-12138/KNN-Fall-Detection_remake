@@ -15,7 +15,7 @@
 
 
 #### update
-+ **2023.04.07**:modify the src & test kmeans.:evergreen_tree:
++ **2024.04.07**:modify the src & test kmeans.:evergreen_tree:
 + **2024.03.26**:get og repo.:hugs:
 
 #### TODO
