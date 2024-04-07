@@ -146,7 +146,7 @@ keyPoint = [
     "right_foot_index"
 ]
 res_point = []
-cap = cv2.VideoCapture("Fall_Trim.mp4")
+cap = cv2.VideoCapture("50_ways_fall.mp4")
 with mp_pose.Pose(
         static_image_mode=True,
         min_detection_confidence=0.5,
