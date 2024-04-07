@@ -1,9 +1,30 @@
-![image](https://github.com/Code-Deer/KNN-Fall-Detection/blob/main/result.gif)
-# KNN-Fall-Detection
-基于Mediapipe框架检测人体3D骨架，KNN算法识别人体是否跌倒。
-# 提取训练数据
-执行Train_Model.py文件，单击‘空格键’分别提取正常姿态，跌倒姿态数据为csv文件，作为训练数据。
-# KNN算法对提取数据进行分类
-执行KNN-Model.py文件，进行数据分类。
-# 检测姿态
-执行Mediapipe_Poe.py文件，演示结果。
+# Fall Detection based on mediapipe
+
+
+#### Workflow
+    1.Get key_point file(get_key_point.py).
+    2.A cluster method is used to get n_cluster(kmeans_cluster.py).
+    3.Detect video or real time(detect.py).
+
+#### Dependencies and Installation
+    python==3.10.8
+        
+    git clone https://github.com/Justin-12138/KNN-Fall-Detection_remake
+    cd KNN-Fall-Detection_remake
+    pip install -r req.txt
+
+
+#### update
++ **2023.04.07**:modify the src & test kmeans.:evergreen_tree:
++ **2024.03.26**:get og repo.:hugs:
+
+#### TODO
+-[ ] add more cluster method
+-[ ] add webui based on gradio
+-[ ] add docker image
+
+#### Contact
+If you have any questions, please feel free to reach me out at justinliu707@gmail.com.
+
+
+
