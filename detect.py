@@ -147,6 +147,7 @@ keyPoint = [
 ]
 res_point = []
 cap = cv2.VideoCapture("50_ways_fall.mp4")
+# cap =cv2.VideoCapture(0)
 with mp_pose.Pose(
         static_image_mode=True,
         min_detection_confidence=0.5,
@@ -161,7 +162,6 @@ with mp_pose.Pose(
         results = pose.process(image)
         if results.pose_landmarks:
             for index, landmarks in enumerate(results.pose_landmarks.landmark):
-                # print(index, landmarks.x, landmarks.y, landmarks.z)
                 res_point.append(landmarks.x)
                 res_point.append(landmarks.y)
                 res_point.append(landmarks.z)

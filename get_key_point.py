@@ -193,7 +193,7 @@ with mp_pose.Pose(
             print(res_point)
             print(res_point.shape)
             data = pd.DataFrame(data=res_point, columns=keyXYZ, index=None)
-            data.to_csv("key_point.csv", encoding='utf-8',index=False)
+            data.to_csv("key_point.csv", encoding='utf-8')
             break
 cap.release()
 cv2.destroyAllWindows()
