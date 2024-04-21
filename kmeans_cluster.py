@@ -13,4 +13,4 @@ plt.scatter(features.values[:, 0], features.values[:, 1], c=labels, cmap='viridi
 centers = kmeans.cluster_centers_
 plt.scatter(centers[:, 0], centers[:, 1], c='red', s=300, alpha=0.5)
 plt.show()
-joblib.dump(kmeans, "Model/KMeansModel.joblib")
+joblib.dump(kmeans, "../Model/KMeansModel.joblib")

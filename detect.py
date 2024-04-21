@@ -4,7 +4,7 @@ import numpy as np
 import time
 import joblib
 
-pose_knn = joblib.load('Model/KMeansModel.joblib')
+pose_knn = joblib.load('../Model/KMeansModel.joblib')
 mp_drawing = mp.solutions.drawing_utils
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
@@ -146,8 +146,10 @@ keyPoint = [
     "right_foot_index"
 ]
 res_point = []
+
 cap = cv2.VideoCapture("50_ways_fall.mp4")
 # cap =cv2.VideoCapture(0)
+
 with mp_pose.Pose(
         static_image_mode=True,
         min_detection_confidence=0.5,
@@ -174,7 +176,6 @@ with mp_pose.Pose(
                 cv2.putText(image, "State:Fall", (10, 30), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 0), 1)
             else:
                 cv2.putText(image, "State:Normal", (10, 30), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 1)
-        # Draw the pose annotation on the image.
         image.flags.writeable = True
         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         mp_drawing.draw_landmarks(
@@ -187,7 +188,6 @@ with mp_pose.Pose(
         fps = 1 / (currTime - prevTime)
         prevTime = currTime
         cv2.putText(image, f'FPS: {int(fps)}', (20, 50), cv2.FONT_HERSHEY_PLAIN, 1, (0, 196, 255), 1)
-
         new_width = 1000
         new_height = 600
         cv2.namedWindow('MediaPipe Pose', cv2.WINDOW_NORMAL)

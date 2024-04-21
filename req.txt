@@ -1,0 +1,8 @@
+pandas
+gradio
+numpy
+joblib
+opencv-python
+mediapipe
+scikit-learn
+matplotlib
